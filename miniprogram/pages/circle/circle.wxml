@@ -1,0 +1,4 @@
+<!--pages/circle/circle.wxml-->
+<view>{{name}} !</view>
+<button bindtap="changeName">单击</button>
+<button bindtap="changePage">查看日志</button>

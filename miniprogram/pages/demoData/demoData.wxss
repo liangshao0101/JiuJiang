@@ -1,0 +1,4 @@
+/* pages/demoData/demoData.wxss */
+.con{
+  font-size: 8px
+}

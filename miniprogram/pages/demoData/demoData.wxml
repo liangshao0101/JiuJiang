@@ -1,0 +1,59 @@
+<!--pages/demoData/demoData.wxml-->
+<!-- <view wx:if = "{{c > 3}}">{{text}}</view>
+<button bindtap="changeText">修改字符串</button>
+<view>{{array[1].text}}</view>
+<button bindtap="changeItemInArray">修改数组</button>
+<view>{{object.message}}</view>
+<button bindtap="changeItemInobject">修改对象</button>
+<view>{{newField.text}}</view>
+<button bindtap="addNewField">添加一个新对象</button> -->
+<checkbox checked="{{true}}"></checkbox>
+<view hidden="{{1>2 ? true : false}}">你好啊</view>
+<view>{{a+b}}+{{c}}+d</view>
+<view>{{"hello"+text}}</view>
+<view>{{array2[0]}}</view>
+<!-- <view wx:for-items ="{{[c,5,6,7,8,9]}}"> {{item}} </view> -->
+
+<template name = "objectCombine">
+<view>
+<text>for = {{for}}</text>
+<text>bar = {{bar}}</text>
+</view>
+</template>
+<template is="objectCombine" data = "{{for : a,bar : c}}"></template>
+
+<!-- <view wx:for="{{zhangjie}}">{{item}}</view> -->
+<!-- <view wx:for="{{[1,2,3,4,5,6,7,8,9]}}"  wx:for-item = "i">
+<view wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:for-item = "j">
+<view wx:if="{{i < = j}}" > 
+ {{i}} * {{j}} = {{i*j}}
+</view>
+</view>
+</view> -->
+
+<view class='con'>
+  <view wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:for-item="i">
+    <view style='display:inline-block;width:35px' wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:for-item="j">
+      <view wx:if="{{j<=i}}">
+        {{i}}*{{j}}={{i*j}}
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- <block wx:for="{{[1,2,3,4]}}">
+<view>{{index}}:</view>
+<view>{{item}}</view>
+</block> -->
+
+<!-- <switch wx:for="{{objectArray}}" wx:key="unique" style = "display :block">{{item.id}}</switch>
+<button bindtap="addToFront">在最前面增加一个Switch</button>
+<switch wx:for={{numberArray}} wx:key="*this" style="dispaly : block">{{item}}</switch>
+<button bindtap="addNumberToFront">在最前面添加一个Switch</button> -->
+
+<view wx:if = "{{view == 'IOS'}}">IOS</view>
+<view wx:elif = "{{view == 'Android'}}">Android</view>
+<view wx:else = "{{view == 'MINA'}}">MINA</view>
+
+<view bindtap="add">{{count}}</view>
+<button bindtap="addTest">累加</button>
